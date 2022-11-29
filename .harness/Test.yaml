@@ -1,0 +1,30 @@
+pipeline:
+  name: Test
+  identifier: Test
+  projectIdentifier: Test_DTeam
+  orgIdentifier: default
+  tags: {}
+  stages:
+    - stage:
+        name: Test
+        identifier: Test
+        description: ""
+        type: Custom
+        spec:
+          execution:
+            steps:
+              - step:
+                  type: ShellScript
+                  name: Shell Script
+                  identifier: ShellScript
+                  spec:
+                    shell: Bash
+                    onDelegate: true
+                    source:
+                      type: Inline
+                      spec:
+                        script: echo "Test"
+                    environmentVariables: []
+                    outputVariables: []
+                  timeout: 10m
+        tags: {}
